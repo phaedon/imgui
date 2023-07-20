@@ -31,6 +31,9 @@ JSON/
 ## Commonly used CMake directories
 build*/
 
+## Bazel artifacts
+bazel-*
+
 ## Xcode artifacts
 project.xcworkspace
 xcuserdata
