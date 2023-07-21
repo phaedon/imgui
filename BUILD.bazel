@@ -2,10 +2,13 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "imgui",
-    srcs = glob(["*.cpp"]),
+    srcs = glob([
+        "*.cpp",
+        "backends/imgui_impl_opengl3.cpp",
+    ]),
     hdrs = glob([
         "*.h",
         "backends/imgui_impl_opengl3.h",
+        "backends/imgui_impl_opengl3_loader.h",
     ]),
-    
 )
