@@ -18,6 +18,10 @@ cc_library(
         "imgui_impl_opengl3_loader.h",
     ],
     includes = ["."],
+    linkopts = select({
+        "@bazel_tools//src/conditions:linux_x86_64": ["-lGL"],
+        "@bazel_tools//src/conditions:darwin": [],
+    }),
     visibility = ["//visibility:public"],
     deps = [
         "//:imgui",
